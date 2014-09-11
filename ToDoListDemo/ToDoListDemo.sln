@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoListDemo", "ToDoListDemo\ToDoListDemo.csproj", "{477FB3F5-932D-497B-9C13-0286972BA257}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRepository", "IRepository\IRepository.csproj", "{040A34D3-E5F1-41FF-AD9D-43917E3DCADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "DataRepository\Repository.csproj", "{0A9953AB-056F-4B70-B638-59BD8FCA052B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{477FB3F5-932D-497B-9C13-0286972BA257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{477FB3F5-932D-497B-9C13-0286972BA257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{477FB3F5-932D-497B-9C13-0286972BA257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{040A34D3-E5F1-41FF-AD9D-43917E3DCADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040A34D3-E5F1-41FF-AD9D-43917E3DCADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040A34D3-E5F1-41FF-AD9D-43917E3DCADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040A34D3-E5F1-41FF-AD9D-43917E3DCADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A9953AB-056F-4B70-B638-59BD8FCA052B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9953AB-056F-4B70-B638-59BD8FCA052B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9953AB-056F-4B70-B638-59BD8FCA052B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9953AB-056F-4B70-B638-59BD8FCA052B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
