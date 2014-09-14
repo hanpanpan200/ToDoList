@@ -6,6 +6,6 @@ namespace IRepository
 {
     public interface IDataRepository
     {
-
+        bool Login(string argUserName, string argPwd);
     }
 }

@@ -1,0 +1,85 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <script src="~/Contents/js/jquery-1.11.1.js"></script>
+    <script src="~/Contents/js/bootstrap.js"></script>
+    <link href="~/Contents/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Contents/css/signin.css" rel="stylesheet" />
+</head>
+<body>     
+    <div class="container">
+        @*<div class="modal fade" id="tipWindow" style="display:none">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">提示信息</h4>
+                    </div>
+                    <div class="modal-body" id="tipContent">
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.m*@odal -->      
+
+        <form class="form-signin" role="form">
+            @*<a href="#"><span class="glyphicon glyphicon-cloud"></span></a>*@
+            <h4 class="form-signin-heading">Login To Your ToDoList</h4>
+            <input id="inputUserName" type="text" class="form-control" placeholder="用户名" required="required" autofocus="">
+            <input id="inputPwd" type="password" class="form-control" placeholder="密码" required="required">
+            @*<div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>*@
+            <button id="btnLogin" class="btn btn-lg btn-primary btn-block" type="submit" data-toggle="modal" data-target="#tipWindow" data-url="LoginToSystem">登陆</button>
+            <hr style="border: 1px solid #BEB9B9"/>
+            <a href="#" class="btn btn-link">忘记密码?</a>
+            <a href="#" class="btn btn-link" style="float:right">注册</a>
+        </form>
+    </div>
+    <script type="text/javascript">
+        $("#btnLogin").click(function () {
+            var userName = $("#inputUserName").val();
+            var pwd = $("#inputPwd").val();
+
+            if (userName == null || userName === "" || userName == undefined) {
+                //$("#tipContent p").text("用户名不能为空!");
+                //$("#tipWindow").toggle();
+            }
+            if (pwd == null || pwd === "" || pwd == undefined) {
+                //$("#tipContent p").text("密码不能为空!");
+                //$("#tipWindow").toggle();
+            }       
+            $.ajax({
+                url: $(this).data("url"),
+                data: {
+                    argUserName: userName,
+                    argPwd: pwd
+                },
+                type: "post",
+                success: function (data) {
+                    if (typeof data.Success === "boolen") {
+                        if (!data.Success) {
+                            //$("#tipContent p").text(data.Message);
+                            //$("#tipWindow").toggle();
+                        } else {
+                            location.href = "Index";
+                        }
+                    }
+                }
+            });
+            });
+    </script>
+</body>
+</html>
